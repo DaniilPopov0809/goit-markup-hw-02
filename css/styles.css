@@ -4,12 +4,18 @@
   --footer-text-color: rgba(255, 255, 255, 0.6);
   --accent-color: #2196f3;
   --primary-white-color: #ffffff;
+  --primary-grey-bgc: #f5f5f5;
+  --secondary-grey-bgc: #f5f4fa;
+  --dark-grey-bgc: #2f303a;
+  --portfolio-container-bgc: #eeeeee;
+  --btn-activ-color: #188ce8;
 }
 
 body {
+  background-color: var(--primary-white-color);
+
   font-family: "Roboto", sans-serif;
   font-size: 14px;
-  font-weight: 400;
   line-height: 1.14;
   letter-spacing: 0.03em;
 
@@ -70,14 +76,17 @@ body {
 
 /* Hero styles */
 
-.hero-title {
-  background-color: grey; /*for visibility */
+.hero-section {
+  background-color: var(--dark-grey-bgc);
+}
 
+.hero-title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-align: center;
+  text-transform: uppercase;
 
   color: var(--primary-white-color);
 }
@@ -95,9 +104,19 @@ body {
   cursor: pointer;
 }
 
+.btn:hover,
+.btn:focus {
+  background-color: var(--btn-activ-color);
+}
 /* Features styles */
 
+.features-section,
+.about-section {
+  background-color: var(--primary-grey-bgc);
+}
+
 .features-list-title {
+  font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
 
@@ -120,6 +139,9 @@ body {
 }
 
 /* Our command styles */
+.command-section {
+  background-color: var(--secondary-grey-bgc);
+}
 
 .command-item {
   font-size: 16px;
@@ -132,9 +154,12 @@ body {
   color: var(--title-text-color);
 }
 
+.command-list-item {
+  background-color: var(--primary-white-color);
+}
 /* Footer styles */
 .footer {
-  background-color: grey; /*for visibility */
+  background-color: var(--dark-grey-bgc);
 }
 
 .footer .logo-part {
@@ -163,6 +188,9 @@ body {
 /* -------------Portfolio page---------------- */
 
 .portfolio-btn {
+  background-color: var(--secondary-grey-bgc);
+
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
@@ -173,9 +201,14 @@ body {
   cursor: pointer;
 }
 
-.click {
+.portfolio-btn:hover,
+.portfolio-btn:focus {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
+}
+
+.work-item {
+  background-color: var(--portfolio-container-bgc);
 }
 
 .work-title {
@@ -183,6 +216,8 @@ body {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+
+  
 
   color: var(--title-text-color);
 }
